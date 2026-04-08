@@ -71,3 +71,36 @@ Total cost = ₹130
 
 Chain-of-Thought =  
 "First think → Then solve → Then answer"
+
+```python
+# Chain-of-Thought Prompt – Gemini (Simple Example)
+
+## Python Example (Gemini API)
+
+```python
+import google.generativeai as genai
+
+# Configure API Key
+genai.configure(api_key="YOUR_API_KEY")
+
+# Load Gemini model
+model = genai.GenerativeModel("gemini-1.5-flash")
+
+# Chain-of-Thought Prompt
+prompt = """
+Solve the following problem step by step:
+
+A person buys:
+- 2 items costing ₹50 each
+- 1 item costing ₹30
+
+First calculate each step, then give the final answer.
+"""
+
+# Generate response
+response = model.generate_content(prompt)
+
+# Print output
+print(response.text)
+
+```

@@ -102,6 +102,9 @@ LLM APIs provide a structured way to interact with language models programmatica
 2.Create Workspace
 3.Understand API_KEY ,Langchain Frame work and Gemini AI GOOGLE STUDIO
 4.then add the code below mentioned
+```
+
+```python
 
 import getpass
 import os

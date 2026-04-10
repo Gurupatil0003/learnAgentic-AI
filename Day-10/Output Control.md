@@ -189,11 +189,12 @@ User asks:
 | Reliability | ❌ Low             | ✅ High        |
 
 
-What you  Will REALIZE 💡
-AI is not just chat → it controls systems
-JSON is needed because APIs require structure
-Without control → API call fails ❌
-With control → automation works ✅
+### What you  Will REALIZE 💡
+
+1. AI is not just chat → it controls systems
+2. JSON is needed because APIs require structure
+3. Without control → API call fails ❌
+4. With control → automation works ✅
 
 
 https://colab.research.google.com/drive/1a94Q0yt6ormej0dMppX8ojEX2MMN2Q3B?usp=sharing

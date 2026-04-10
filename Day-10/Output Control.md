@@ -197,4 +197,12 @@ User asks:
 4. With control → automation works ✅
 
 
-https://colab.research.google.com/drive/1a94Q0yt6ormej0dMppX8ojEX2MMN2Q3B?usp=sharing
+
+
+## Practice code
+
+| Platform | Link |
+|----------|------|
+| <img src="https://colab.research.google.com/img/colab_favicon_256px.png" width="20"/> Next Word Prediction | [Open Notebook](https://colab.research.google.com/drive/1a94Q0yt6ormej0dMppX8ojEX2MMN2Q3B?usp=sharing) |
+| <img src="https://cdn-icons-png.flaticon.com/512/5968/5968906.png" width="20"/> Medium | [Read Article](YOUR_MEDIUM_LINK_HERE) |
+

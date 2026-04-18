@@ -250,3 +250,84 @@ Mastering prompt anatomy is essential for building **powerful Agentic AI systems
 The better your prompts, the smarter your AI behaves.
 
 > “Good prompts give answers. Great prompts build intelligence.”
+
+## Code Examples 1 :Open model Llama
+```python
+import transformers
+import torch
+from transformers import AutoTokenizer
+
+model_id = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+
+pipeline = transformers.pipeline(
+    "text-generation",
+    model=model_id,
+    tokenizer=tokenizer,
+    model_kwargs={"torch_dtype": torch.float32},
+    device_map="auto",
+)
+
+messages = [
+    {"role": "system", "content": "You are a personal assistant."},
+    {"role": "user", "content": "can u make plan for me tommorow"},
+]
+
+prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+
+outputs = pipeline(
+    prompt,
+    max_new_tokens=150,
+    temperature=0.7,
+)
+
+print(outputs[0]["generated_text"])
+
+
+
+
+```
+
+## Example 2: Closed Model using Gemini
+```python
+import os
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_core.messages import SystemMessage, HumanMessage
+
+# Set API key directly in Colab (simplest way)
+os.environ["GOOGLE_API_KEY"] = "Your API key"
+
+model = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
+
+system_message = SystemMessage(
+    content="""
+You are a personal diet planner.
+
+- Only answer diet, nutrition, and health questions.
+- If anything else is asked, reply:
+  "I only help with diet planning."
+- Give simple meal plans (breakfast, lunch, dinner, snacks).
+"""
+)
+
+chat_history = [system_message]
+
+while True:
+    user_input = input("You: ")
+
+    if user_input.lower() in ["exit", "quit"]:
+        break
+
+    chat_history.append(HumanMessage(content=user_input))
+
+    response = model.invoke(chat_history)
+    chat_history.append(response)
+
+    print("Model:", response.content)
+    
+
+
+
+
+```

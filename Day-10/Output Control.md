@@ -5,9 +5,6 @@ Agentic AI systems don’t just generate text—they make decisions, call APIs, 
 If outputs are not controlled:
 
 
-
-
-
 ❌ APIs break  
 ❌ Automation fails  
 ❌ Data pipelines crash  

@@ -2,10 +2,6 @@
 
 Agentic AI systems don’t just generate text—they make decisions, call APIs, trigger workflows, and interact with other systems.
 
-
-
-
-
 If outputs are not controlled:
 
 ❌ APIs break  

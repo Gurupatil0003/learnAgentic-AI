@@ -3,7 +3,6 @@
 
 
 
-
 # Examples-Based Prompting (Agentic AI Context)
 
 ## 1. Overview

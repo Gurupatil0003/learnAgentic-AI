@@ -1,6 +1,5 @@
 ```python
 
-
 !pip install -q -U crewai rich
 
 import os

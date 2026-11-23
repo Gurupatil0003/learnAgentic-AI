@@ -8,6 +8,7 @@ from crewai import Agent, Task, Crew, Process, LLM
 from rich.console import Console
 from rich.panel import Panel
 
+
 console = Console()
 
 # 1. Groq API Key
